@@ -244,11 +244,20 @@ h1 {
 
 button {
   background-color: #ff95ae;
+  font-size: 3rem;
   color: #222222;
   text-transform: uppercase;
   border: 2px dashed #222222;
   padding: 20px 30px;
   border-radius: 25px;
+}
+
+button:hover, button:focus {
+  color: #ff95ae;
+  background-color: #222222;
+  border: 2px dashed #ff95ae;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 canvas.shake {
