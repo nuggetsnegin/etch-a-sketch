@@ -1,0 +1,23 @@
+/*MAIN*/
+$base-color: rgb(34, 34, 34);
+$accent-color: rgb(255, 149, 174);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: $base-color;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1% auto;
+
+  i {
+    font-size: 3rem;
+  }
+}
