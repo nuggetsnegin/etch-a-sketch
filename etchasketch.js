@@ -21,16 +21,16 @@ ctx.lineCap = 'round';
 ctx.lineWidth = 10; /*increased default width*/
 
 
+/*randomize the starting spot!*/
+const x = Math.floor(Math.random() * width );
+const y = Math.floor(Math.random() * height );
+
+
 /*etch-a-sketch requires a dot on the page to start*/
 ctx.beginPath(); /*start the drawing*/
-ctx.moveTo(200, 200); /*where we're starting*/
-ctx.lineTo(200, 200); /*where we draw our line to*/
+ctx.moveTo(x, y); /*where we're starting*/
+ctx.lineTo(x, y); /*where we draw our line to*/
 ctx.stroke();
-
-/*randomize the starting spot!*/
-
-
-
 
 /*write a draw function*/
 
