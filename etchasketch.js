@@ -1,12 +1,9 @@
-console.log('it works')
-
 /*select elements ont he page:
 canvas, shake button*/
 const canvas = document.querySelector('#etch-a-sketch'); /*id tag*/
 const ctx = canvas.getContext('2d');  /*setting context of the canvas to 2d*/
-console.log(ctx);
 const shakeButton = document.querySelector('.shake'); /*grabbing button*/
-
+const MOVE_AMOUNT = 10; /*when it is a true constant - make it all uppercase with underscore*/
 /*need to actual width and height to randomize*/
 // const width = canvas.width;
 // const height = canvas.height;
@@ -39,8 +36,8 @@ function draw({key}){ /*object destructing - rename properties into variables*/
     ctx.moveTo(x, y);
 
     /*move our x and y values depending on what the user does*/
-    x = x - 10;
-    y = y - 10;
+    x = x - MOVE_AMOUNT;
+    y = x - MOVE_AMOUNT;
     ctx.lineTo(x,y);
     ctx.stroke();
 }
