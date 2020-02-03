@@ -22,8 +22,8 @@ ctx.lineWidth = 10; /*increased default width*/
 
 
 /*randomize the starting spot!*/
-const x = Math.floor(Math.random() * width );
-const y = Math.floor(Math.random() * height );
+let x = Math.floor(Math.random() * width );
+let y = Math.floor(Math.random() * height );
 
 
 /*etch-a-sketch requires a dot on the page to start*/
@@ -35,6 +35,14 @@ ctx.stroke(); /*put it on the page*/
 /*write a draw function*/
 function draw({key}){ /*object destructing - rename properties into variables*/
     console.log(key)
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+
+    /*move our x and y values depending on what the user does*/
+    x = x - 10;
+    y = y - 10;
+    ctx.lineto(x,y);
+    ctx.stroke();
 }
 
 
