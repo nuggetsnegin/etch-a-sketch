@@ -30,12 +30,26 @@ const y = Math.floor(Math.random() * height );
 ctx.beginPath(); /*start the drawing*/
 ctx.moveTo(x, y); /*where we're starting*/
 ctx.lineTo(x, y); /*where we draw our line to*/
-ctx.stroke();
+ctx.stroke(); /*put it on the page*/
 
 /*write a draw function*/
+function draw({key}){ /*object destructing - rename properties into variables*/
+    console.log(key)
+}
+
 
 /*event handler for the keys*/
+function handleKey(event){
+
+    if(event.key.includes('Arrow')){ 
+        event.preventDefault(); /*stop default of arrow keys from scrolling the page*/
+        draw({key: event.key}); /*only passing in event key as an obj*/
+        // console.log(event);
+        console.log('handling key')
+    }
+}
 
 /*clear or shake function*/
 
 /*listen for arrow keys*/
+window.addEventListener('keydown', handleKey); /*site-wide by listening on the window*/
