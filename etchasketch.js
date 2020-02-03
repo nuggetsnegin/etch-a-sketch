@@ -31,8 +31,6 @@ ctx.stroke(); /*put it on the page*/
 
 /*write a draw function*/
 function draw({key}){ /*object destructing - rename properties into variables*/
-    console.log(key)
-
     ctx.beginPath();
     ctx.moveTo(x, y);
     /*switch statement based off 4 different key binds (more readable than if)*/
@@ -65,8 +63,6 @@ function handleKey(event){
     if(event.key.includes('Arrow')){ 
         event.preventDefault(); /*stop default of arrow keys from scrolling the page*/
         draw({key: event.key}); /*only passing in event key as an obj*/
-        // console.log(event);
-        console.log('handling key')
     }
 }
 
