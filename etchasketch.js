@@ -41,7 +41,7 @@ function draw({key}){ /*object destructing - rename properties into variables*/
     /*move our x and y values depending on what the user does*/
     x = x - 10;
     y = y - 10;
-    ctx.lineto(x,y);
+    ctx.lineTo(x,y);
     ctx.stroke();
 }
 
