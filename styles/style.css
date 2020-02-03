@@ -215,6 +215,12 @@ html {
 body {
   font-family: 'Press Start 2P', cursive;
   color: #222222;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h1 {

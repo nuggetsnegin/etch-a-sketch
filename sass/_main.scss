@@ -9,6 +9,9 @@ html {
 body {
   font-family: 'Press Start 2P', cursive;
   color: $base-color;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
 }
 
 h1 {
