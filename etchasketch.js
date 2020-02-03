@@ -78,7 +78,7 @@ function clearCanvas(){
     /*but we keep adding event listeners this way*/
     canvas.addEventListener('animationend', function(){ /*so we can re-add shake, if we dont use this shake will always be on the canvas*/
         canvas.classList.remove('shake'); /*reset*/
-    })
+    }, {once: true}); /*only add the eventListener once because it unbinds itself!*/
 }
 
 /*listen for arrow keys*/
