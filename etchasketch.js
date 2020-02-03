@@ -74,7 +74,7 @@ function handleKey(event){
 
 function clearCanvas(){
     canvas.classList.add('shake'); /*adding shake*/
-
+    ctx.clearRect(0, 0, width, height);
     /*but we keep adding event listeners this way*/
     canvas.addEventListener('animationend', function(){ /*so we can re-add shake, if we dont use this shake will always be on the canvas*/
         canvas.classList.remove('shake'); /*reset*/
@@ -83,3 +83,4 @@ function clearCanvas(){
 
 /*listen for arrow keys*/
 window.addEventListener('keydown', handleKey); /*site-wide by listening on the window*/
+shakeButton.addEventListener('click', clearCanvas);
