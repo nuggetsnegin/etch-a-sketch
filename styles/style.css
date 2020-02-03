@@ -221,15 +221,85 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
+  background-color: #dfd9d9;
+}
+
+canvas {
+  border: 15px solid #ff95ae;
+  border-radius: 25px;
+  /*set width and heigh tto half the size of canvas size so it doesnt look pixelated*/
+  width: 800px;
+  height: 500px;
+  background: white;
 }
 
 h1 {
-  font-family: 'Bungee Shade', cursive;
-  font-size: 3rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #222222;
+  font-size: 5rem;
+  text-transform: uppercase;
   text-align: center;
-  margin: 1% auto;
 }
 
-h1 i {
-  font-size: 3rem;
+button {
+  background-color: #ff95ae;
+  color: #222222;
+  text-transform: uppercase;
+  border: 2px dashed #222222;
+  padding: 20px 30px;
+  border-radius: 25px;
+}
+
+canvas.shake {
+  -webkit-animation: shake 0.5s linear 1;
+          animation: shake 0.5s linear 1;
+}
+
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(1px, 0, 0);
+            transform: translate3d(1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(1px, 0, 0);
+            transform: translate3d(1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
 }
