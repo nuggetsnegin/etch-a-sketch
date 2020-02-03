@@ -32,12 +32,28 @@ ctx.stroke(); /*put it on the page*/
 /*write a draw function*/
 function draw({key}){ /*object destructing - rename properties into variables*/
     console.log(key)
+
     ctx.beginPath();
     ctx.moveTo(x, y);
+    /*switch statement based off 4 different key binds (more readable than if)*/
+    switch(key){
+        case 'ArrowUp':
+            y = y - MOVE_AMOUNT;
+            break;
+        case 'ArrowDown':
+            y = y + MOVE_AMOUNT;
+            break;
+        case 'ArrowLeft':
+            x = x - MOVE_AMOUNT;
+            break;
+        case 'ArrowRight':
+            x = x + MOVE_AMOUNT;
+            break;
+        default:
+            break;
+    }
 
-    /*move our x and y values depending on what the user does*/
-    x = x - MOVE_AMOUNT;
-    y = x - MOVE_AMOUNT;
+
     ctx.lineTo(x,y);
     ctx.stroke();
 }
