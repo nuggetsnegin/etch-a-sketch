@@ -17,6 +17,10 @@ ctx.lineJoin = 'round'; /*set the *brush* it so it's rounded*/
 ctx.lineCap = 'round';
 ctx.lineWidth = 10; /*increased default width*/
 
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+/*increment the hue so we can randomize it on keydown!*/
 
 /*randomize the starting spot!*/
 let x = Math.floor(Math.random() * width );
@@ -31,6 +35,8 @@ ctx.stroke(); /*put it on the page*/
 
 /*write a draw function*/
 function draw({key}){ /*object destructing - rename properties into variables*/
+    hue += 6;
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; /*update*/
     ctx.beginPath();
     ctx.moveTo(x, y);
     /*switch statement based off 4 different key binds (more readable than if)*/
@@ -50,8 +56,6 @@ function draw({key}){ /*object destructing - rename properties into variables*/
         default:
             break;
     }
-
-
     ctx.lineTo(x,y);
     ctx.stroke();
 }
